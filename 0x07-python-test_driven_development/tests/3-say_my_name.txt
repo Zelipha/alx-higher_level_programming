@@ -13,11 +13,6 @@ Passing first_name and last_name correctly
     >>> say_my_name("Betty", "Holberton")
     My name is Betty Holberton
 
-Passing first_name and last_name correctly 2
-
-    >>> say_my_name("Luis")
-    My name is Luis
-
 Passing None as the last_name
 
     >>> say_my_name("John", None)
