@@ -8,5 +8,4 @@ def lookup(obj):
 
        Args (obj): list
     """
-
     return dir(obj)
