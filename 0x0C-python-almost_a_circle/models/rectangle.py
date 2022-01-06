@@ -91,8 +91,7 @@ class Rectangle(Base):
     def update(self, *args):
         """Assigns an argument to each attribute
 
-            Args:
-               *args (int): The values replacing the attributes
-               **kwargs (dict): Key, Value pairs of the attributes
+           Args:
+                *args (int): The values replacing the attributes
+                **kwargs (dict): Key, Value pairs of the attributes
         """
-        
