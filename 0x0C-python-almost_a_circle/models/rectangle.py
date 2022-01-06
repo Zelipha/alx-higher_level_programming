@@ -80,3 +80,8 @@ class Rectangle(Base):
             for symbol in range(self.__width):
                 print("#", end="")
             print('')
+
+    def __str__(self):
+        """Overrides __str__ to [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
+        return (f"[Rectangle] " + f"({self.id}) {self.__x}/"
+                + f"{self.y} - {self.__width}/{self.__height}")
