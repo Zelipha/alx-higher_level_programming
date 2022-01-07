@@ -10,6 +10,16 @@ class Square(Rectangle):
         """Initializes the square"""
         super().__init__(size, size, x, y, id)
 
+    @property
+    def size(self):
+        """Get/set the size of the square"""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        self.width = value
+        self.width = value
+
     def __str__(self):
         """Overloading __str__ method to return [Square] (<id>)
            <x>/<y> - <size>
