@@ -29,8 +29,8 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """Assigns an argument to each attribute
-        
-           Args:
+
+            Args:
                *args (int): The values replacing the attributes
                **kwargs (dict): Key, Value pairs of the attributes
         """
@@ -38,7 +38,14 @@ class Square(Rectangle):
             list_attributes = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
                 if list_attributes[i] == 'size':
+                    setattr(self, 'width', args[i])
+                    setattr(self, 'height', args[i])
+                else:
                     setattr(self, list_attributes[i], args[i])
         else:
-                for key, value in kwargs.items():
+            for key, value in kwargs.items():
+                if key == 'size':
+                    setattr(self, 'width', value)
+                    setattr(self, 'height', value)
+                else:
                     setattr(self, key, value)
