@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a class Base"""
 import json
+import os
 
 
 class Base:
@@ -41,7 +42,7 @@ class Base:
                 f.write(Base.to_json_string(new_list))
 
     @staticmethod
-    def from_json_string(json_string):
+    def from__json_string(json_string):
         """Returns the list of the JSON string representation json_string"""
         if json_string is None or json_string == "":
             return []
@@ -56,3 +57,19 @@ class Base:
             instance = cls(3)
         instance.update(**dictionary)
         return instance
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances"""
+        file_name = cls.__name__ + ".json"
+        if os.path.exists(file_name) is False:
+            return []
+        with open(file_name, 'r', encoding='utf-8') as f:
+            list_str = f.read()
+
+        list_cls = cls.from__json_string(list_str)
+        new_list = []
+
+        for index in range(len(list_cls)):
+            new_list.append(cls.create(**list_cls[index]))
+        return new_list
