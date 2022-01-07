@@ -89,13 +89,18 @@ class Rectangle(Base):
                + "/" + str(self.__y) + " - " + str(self.__width)\
                + "/" + str(self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assigns an argument to each attribute
 
            Args:
                 *args (int): The values replacing the attributes
                 **kwargs (dict): Key, Value pairs of the attributes
         """
-        list_attributes = ['id', 'width', 'height', 'x', 'y']
-        for i in range(len(args)):
-            setattr(self, list_attributes[i], args[i])
+        if args is not None and len(args) is not 0:
+            list_attributes = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args)):
+                setattr(self, list_attributes[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+            
