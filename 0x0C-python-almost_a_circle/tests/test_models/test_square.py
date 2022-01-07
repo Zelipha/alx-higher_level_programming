@@ -52,18 +52,18 @@ class TestSquare_instantiation(unittest.TestCase):
 
     def test_size_setter(self):
         s = Square(4, 1, 9, 2)
-        s.size = 8
-        self.assertEqual(8, s.size)
+        s.size = 3
+        self.assertEqual(3, s.size)
 
     def test_width_getter(self):
         s = Square(4, 1, 9, 2)
-        s.size = 8
-        self.assertEqual(8, s.width)
+        s.size = 3
+        self.assertEqual(3, s.width)
 
     def test_height_getter(self):
         s = Square(4, 1, 9, 2)
-        s.size = 8
-        self.assertEqual(8, s.height)
+        s.size = 3
+        self.assertEqual(3, s.height)
 
     def test_x_getter(self):
         self.assertEqual(0, Square(10).x)
