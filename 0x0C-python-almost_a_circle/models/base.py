@@ -42,7 +42,7 @@ class Base:
                 f.write(Base.to_json_string(new_list))
 
     @staticmethod
-    def from__json_string(json_string):
+    def from_json_string(json_string):
         """Returns the list of the JSON string representation json_string"""
         if json_string is None or json_string == "":
             return []
@@ -67,7 +67,7 @@ class Base:
         with open(file_name, 'r', encoding='utf-8') as f:
             list_str = f.read()
 
-        list_cls = cls.from__json_string(list_str)
+        list_cls = cls.from_json_string(list_str)
         new_list = []
 
         for index in range(len(list_cls)):
