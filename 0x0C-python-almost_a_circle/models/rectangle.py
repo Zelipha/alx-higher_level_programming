@@ -96,3 +96,6 @@ class Rectangle(Base):
                 *args (int): The values replacing the attributes
                 **kwargs (dict): Key, Value pairs of the attributes
         """
+        list_attributes = ['id', 'width', 'height', 'x', 'y']
+        for i in range(len(args)):
+            setattr(self, list_attributes[i], args[i])
