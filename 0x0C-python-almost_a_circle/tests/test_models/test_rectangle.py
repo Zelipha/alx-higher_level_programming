@@ -573,8 +573,8 @@ class TestRectangle_update_args(unittest.TestCase):
 
     def test_update_args_twice(self):
         r = Rectangle(10, 10, 10, 10, 10)
-        r.update(89, 2, 3, 4, 5, 6)
-        r.update(6, 5, 4, 3, 2, 89)
+        r.update(89, 2, 3, 4, 6)
+        r.update(6, 4, 3, 2, 89)
         self.assertEqual("[Rectangle] (6) 3/2 - 5/4", str(r))
 
     def test_update_args_invalid_width_type(self):
