@@ -34,14 +34,14 @@ class Square(Rectangle):
                *args (int): The values replacing the attributes
                **kwargs (dict): Key, Value pairs of the attributes
         """
-        if args is not None and len(args) != 0:
-            list_attributes = ['id', 'size', 'x', 'y']
+        if args is not None and len(args) is not 0:
+            list_atr = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
-                if list_attributes[i] == 'size':
+                if list_atr[i] == 'size':
                     setattr(self, 'width', args[i])
                     setattr(self, 'height', args[i])
                 else:
-                    setattr(self, list_attributes[i], args[i])
+                    setattr(self, list_atr[i], args[i])
         else:
             for key, value in kwargs.items():
                 if key == 'size':

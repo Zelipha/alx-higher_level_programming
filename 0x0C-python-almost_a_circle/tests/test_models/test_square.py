@@ -52,18 +52,18 @@ class TestSquare_instantiation(unittest.TestCase):
 
     def test_size_setter(self):
         s = Square(4, 1, 9, 2)
-        s.size = 3
-        self.assertEqual(3, s.size)
+        s.size = 8
+        self.assertEqual(8, s.size)
 
     def test_width_getter(self):
         s = Square(4, 1, 9, 2)
-        s.size = 3
-        self.assertEqual(3, s.width)
+        s.size = 8
+        self.assertEqual(8, s.width)
 
     def test_height_getter(self):
         s = Square(4, 1, 9, 2)
-        s.size = 3
-        self.assertEqual(3, s.height)
+        s.size = 8
+        self.assertEqual(8, s.height)
 
     def test_x_getter(self):
         self.assertEqual(0, Square(10).x)
@@ -640,7 +640,6 @@ class TestSquare_to_dictionary(unittest.TestCase):
         s = Square(10, 10, 10, 10)
         with self.assertRaises(TypeError):
             s.to_dictionary(1)
-
 
 if __name__ == "__main__":
     unittest.main()
