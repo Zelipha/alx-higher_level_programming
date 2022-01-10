@@ -119,3 +119,36 @@ class Base:
     @staticmethod
     def draw(list_rectangles, list_squares):
         """Opens a window and draws all the Rectangles and Squares"""
+        my_turtle = turtle.Turtle()
+        my_turtle.shape("turtle")
+        my_turtle.pensize(2)
+
+        for rec in list_rectangles:
+            if rec.x > 0 and rec.y > 0:
+                my_turtle.penup()
+                my_turtle.goto(rec.x, rec.y)
+                my_turtle.pendown()
+            else:
+                my_turtle.penup()
+                my_turtle.home()
+                my_turtle.pendown()
+            my_turtle.pencolor("green")
+            for i in range(2):
+                my_turtle.fd(rec.width)
+                my_turtle.rt(90)
+                my_turtle.fd(rec.height)
+                my_turtle.rt(90)
+        for s in list_squares:
+            if s.x > 0 and s.y > 0:
+                my_turtle.penup()
+                my_turtle.goto(s.x, s.y)
+                my_turtle.pendown()
+            else:
+                my_turtle.penup()
+                my_turtle.home()
+                my_turtle.pendown()
+            my_turtle.pencolor("red")
+            for i in range(4):
+                my_turtle.fd(s.size)
+                my_turtle.rt(90)
+                my_turtle.ht()
