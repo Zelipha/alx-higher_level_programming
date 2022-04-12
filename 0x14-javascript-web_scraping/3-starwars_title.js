@@ -3,9 +3,9 @@
 
 const request = require('request');
 const args = process.argv.slice(1);
-const url_api = 'https://swapi-api.hbtn.io/api/films/' + args[1];
+const urlApi = 'https://swapi-api.hbtn.io/api/films/' + args[1];
 
-request(url_api, (error, response, body) => {
+request(urlApi, (error, response, body) => {
   if (error) {
     console.log(error);
   } else {
