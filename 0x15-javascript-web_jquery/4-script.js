@@ -1,3 +1,3 @@
 $('#toggle_header').click(function () {
-  $('HEADER').toggleClass('green red');
+  $('header').toggleClass('green red');
 });
